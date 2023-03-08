@@ -24,9 +24,17 @@ export default function Formulario () {
     const [formComplete, setFormComplete] = useState(false)
     const [userFavband, setUserFavband] = useState("")
 
-    const onChangeUserName = (e) => setUserName(e.target.value);
-    const onChangeUserFavband = (e) => setUserFavband(e.target.value)
+    const onChangeUserName = (e) => {
+        setFormComplete(false);
 
+        setUserName(e.target.value);
+
+    }   
+    const onChangeUserFavband = (e) => {
+        setFormComplete(false);
+
+        setUserFavband(e.target.value)
+    }
 
     const onSubmitForm = (e) => {
         e.preventDefault();
